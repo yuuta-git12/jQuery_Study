@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        $(function(){
+            $(".title").on("click",function(){
+                $("p").hide("slow");
+            })
+            $(".title").on("click",function(){
+                $("p").show();
+            })
+        })
+    </script>
+    <style>
+        .title{
+            width: 500px;
+            height: 20px;
+            background-color: brown;
+            color: white;
+        }
+        p{
+            display: none;
+            width: 500px;
+            margin-top: 7px;
+            background-color: aqua;
+        }
+    </style>
+    <title>Training_hide_show</title>
+</head>
+<body>
+    <div class="title">Title01</div>
+    <p>文字としてここにテキストを入れる。</p>
+</body>
+</html>

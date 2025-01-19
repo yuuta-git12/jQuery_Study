@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery.min.js"></script>
+	
+<script>
+$(function(){
+    // animateの書式
+    // $("セレクタ").animate({
+    //     "プロパティ":"値",
+    //     "プロパティ":"値",
+    //     "プロパティ":"値",
+    // })
+    // プロパティはキャメルケースを使って書く
+    $("#circle").animate(
+        {
+            "marginLeft":"500px",
+            "marginTop":"100px",
+            "borderRadius":"0",
+        },
+        {duration:3000,easing:"swing"},
+    );
+});
+</script>
+	
+<style type="text/css">
+#circle{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50px;
+}
+</style>
+
+</head>
+	
+<body>
+    <div id="circle"></div>
+</body>
+</html>

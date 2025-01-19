@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script>
+		$(function(){
+			// pタグ要素の背景色を青色にする
+			$("#change_bgc").on("click dblclick",function(){
+				$("p").css("background-color","blue");
+			});
+
+			// offイベントでclickでのイベントを無効にしている
+			$("#change_bgc").off("click");
+
+			// pタグ要素の背景色を白色にする
+			$("#return_bgc").on("click",function(){
+				$("p").css("background-color","");
+			});
+			// pタグ要素にカーソルを乗せると背景色が赤色になる
+			$("p").hover(
+				function(){
+					$(this).css("background-color","red");
+				},
+				function(){
+					$(this).css("background-color","");
+				},
+			);
+		});
+	</script>
+	<style type="text/css">
+		p{
+			font-size: 1.5em;
+			padding: 10px;
+		}
+	</style>
+</head>
+	<p>「背景色変更」ボタンをクリックすると背景色が変更されます。</p>
+	<button id="change_bgc">背景色変更</button>
+	<button id="return_bgc">元に戻す</button>
+<body>
+
+</body>
+</html>

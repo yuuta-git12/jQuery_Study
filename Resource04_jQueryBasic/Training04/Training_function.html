@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            function color_width(){
+                $(this).css("color","#ccc");
+                $(this).css("width","300px");
+            }
+            $(".box1").on("mouseover",color_width);
+            $(".box2").on("mouseover",color_width);
+            $(".box3").on("mouseover",color_width);
+        })
+    </script>
+    <style type="text/css">
+        p {
+            width: 500px;
+            height: 50px;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .box1{
+            background-color: blue;
+        }
+        .box2{
+            background-color: red;
+        }
+        .box3{
+            background-color: brown;
+        }
+    </style>
+    <title>Training_function</title>
+</head>
+<body>
+    <p class="box1">BOX1</p>
+    <p class="box2">BOX2</p>
+    <p class="box3">BOX3</p>
+</body>
+</html>

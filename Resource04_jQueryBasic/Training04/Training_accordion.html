@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        $(function(){
+            // 最初のp要素以外の要素を対象にするセレクタ
+            $("p:not(:first)").hide();
+            $(".panel>.title").on("click",function(){
+                $(".panel>p").slideUp(500);
+                // .panel>.title直下のpを表すセレクタ
+                $("+p",this).slideDown(500);
+            });
+        })
+    </script>
+    <style>
+        #accordion{
+            padding:10px 10px 10px;
+        }
+        .panel{
+            padding:5px;
+            width: 500px;
+        }
+        .panel>.title{
+            width: 500px;
+            height: 20px;
+            background-color: #CCC;
+            color: black;
+            cursor: pointer;
+            padding: 7px;
+            font-weight: bold;
+        }
+        .panel>p{
+            width: 500px;
+            margin: 7px 0 20px 0;
+            padding: 7px;
+            background-color: aqua;
+        }
+        
+    </style>
+    <title>Training_accordion</title>
+</head>
+<body>
+    <div id="accordion">
+        <div class="panel">
+            <div class="title">シジュウカラ</div>
+            <p>シジュウカラ（四十雀、Parus cinereus）は、シジュウカラ科シジュウカラ属に分類される鳥類。シジュウカラ科はカラ類とも言ったりする。
+    
+                和名は地鳴きの「ジジジッ」が「シジュウ」に聞こえることに由来する説やスズメの40倍珍しいことに由来する説などがある。
+            </p>
+        </div>
+        <div class="panel">
+            <div class="title">メジロ</div>
+            <p>
+                全長約12 cm[6][7]で、スズメよりも小さい。翼開長は約18 cm[7]。緑がかった背と暗褐色の羽を持ち、雌雄同色[7]。目の周囲の白色部（アイリング）が、和名の由来になっている[5]。漢字表記の繍眼児は漢語に由来し、目の周囲に刺繍されたような羽毛がある児（小さいもの）の意とする説もある[5]。室町時代からメジロの名で知られている[8]
+            </p>
+        </div>
+        <div class="panel">
+            <div class="title">モズ</div>
+            <p>
+                全長19-20 cm[6]で、スズメより若干大きい程度である。眼上部に入る眉状の筋模様（眉斑）、喉や頬は淡褐色[6][10]。尾羽の色彩は黒褐色[6][8]。翼の色彩も黒褐色で、雨覆や次列風切、三列風切の外縁（羽縁）は淡褐色[10]。嘴は黒っぽく、先端が曲がった鉤状になっていることが特徴。
+    
+                夏季は摩耗により頭頂から後頸が灰色の羽毛で被われる（夏羽）[6][10]。オスは頭頂から後頸がオレンジ色の羽毛で被われる[8]。体上面の羽衣が青灰色、体側面の羽衣はオレンジ色、体下面の羽衣は淡褐色[8]。また初列風切羽基部に白い斑紋が入る[6][8][10]。嘴の基部から眼を通り後頭部へ続く筋状の斑紋（過眼線）は黒い[6][9][10]。メスは頭頂から後頸が褐色の羽毛で被われる[8]。体上面の羽衣は褐色、体下面の羽衣は淡褐色の羽毛で被われ下面には褐色や黒褐色の横縞が入る[8][10]。過眼線は褐色や黒褐色[6][8]。
+            </p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
