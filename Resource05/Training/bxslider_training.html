@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+<title>ex_bxslider.html</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+      $(function(){
+        $("#bxslider").bxSlider({
+			mode:'fade', //変化の種類を設定、vertival,horizontal,fade
+			speed: 500,
+			auto: true, //自動で画像が変化する
+		});
+      });
+    </script>
+</head>
+
+<body>
+<div id="container">
+    <header>
+        <img src="images/logo.gif">
+    </header>
+
+<!-- スクロール横画像 -->
+<div id="bxslider">
+	<div><img src="images/owl.png"></div>
+	<img src="images/kogera.png">
+	<img src="images/kawasemi.png">
+</div>
+    
+<!-- プルダウンメニューを構成するHTML -->
+    <nav>
+		<ul id="menu">
+			<li><a href="#">春の野鳥</a>
+				<ul class="sub" style="display: none;">
+					<li><a href="#">メジロ</a></li>
+					<li><a href="#">ツバメ</a></li>
+					<li><a href="#">ヒバリ</a></li>
+				</ul>
+			</li>
+			<li><a href="#">夏の野鳥</a>
+				<ul class="sub" style="display: none;">
+					<li><a href="#">オオヨシキリ</a></li>
+					<li><a href="#">アオバズク</a></li>
+					<li><a href="#">カワセミ</a></li>
+				</ul>
+			</li>
+			<li><a href="#">秋の野鳥</a>
+				<ul class="sub" style="display: none;">
+					<li><a href="#">カワラヒワ</a></li>
+					<li><a href="#">モズ</a></li>
+					<li><a href="#">ジョウビタキ</a></li>
+					<li><a href="#">コゲラ</a></li>
+				</ul>
+			</li>
+			<li><a href="#">冬の野鳥</a>
+				<ul class="sub" style="display: none;">
+					<li><a href="#">シジュウカラ</a></li>
+					<li><a href="#">ルリビタキ</a></li>
+                    <li><a href="#">ノスリ</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+    
+   
+<!-- News -->    
+    <article>
+            <h1>Topics</h1>
+            <section>
+                <h2>2016年6月3日 セキレイがベランダに巣を作っていた</h2>
+		    <div class="news">
+		    <img src="images/sekirei_n2.jpg">
+                <p>久しぶりにベランダから外を眺めていると、足元に見慣れない木くずや小枝があるのに気づきました。そのままにしておくと、数時 間後セキレイが来て巣作りを始めました。何度も行き来してせっせと小枝を運んできます。オスなのかメスなのか、1羽なのか2羽な のかもわかりません。こんな街中のマンションでも巣を作るんですね。</p>
+		 	</div>
+            </section>
+            <section>
+                <h2>2016年1月15日 二丁目のウメの花が開花 メジロが数羽</h2>
+		    <div class="news">
+		    <img src="images/mejiro_n2.jpg">
+                <p>二丁目の民家宅庭先のウメの花が咲きました。通勤途中で見かけました。少し見ているとメジロが数羽ですが来ていました。もうす ぐ春。サクラが咲くころになるとメジロたちは群れになって花のある木から木へと移動します。一時の消滅危惧から今は個体数も回 復しているようです。</p>
+		</div>
+            </section>
+            <section>
+                <h2>2013年11月3日 三丁目公園でモズ</h2>
+		    <div class="news">
+		    <img src="images/mozu_n.jpg">
+                <p>11月3日の朝、散歩の途中で三丁目公園の松の木の上でモズが鳴いていました。あたりの木の中で1番高いところに陣取り、周囲 を威嚇するように鳴いていました。同じ場所では去年の冬にもモズがみられました。同じ個体が冬に戻ってきて、同じテリトリーで過 ごしているようにも見えます。</p>
+		</div>
+            </section>
+            <section>
+                <h2>2012年5月3日 カルガモが植木の中に巣をつくった</h2>
+		    <div class="news">
+		    <img src="images/karugamo.jpg">
+                <p>公園西の街のマンション2階の植え込みの中でカルガモが巣を作りヒナをかえしました。昨日知り合いから知らせがあり見てきまし た。植え込みの近くの池にヒナを連れて行こうとしていましたが、人が見に来ていて躊躇しているようでした。ただ残念ながらこの池 には水はわずかしかありません。餌もないのでヒナを育てるには不十分です。このカルガモのヒナたち、無事に巣立ちができるどう か不安です。</p>
+		</div>
+            </section>
+        </article>
+
+</div>
+</body>
+</html>
