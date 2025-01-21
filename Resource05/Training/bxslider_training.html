@@ -8,8 +8,8 @@
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script>
       $(function(){
-        $("#bxslider").bxSlider({
-			mode:'fade', //変化の種類を設定、vertival,horizontal,fade
+        $(".bxslider").bxSlider({
+			mode:'horizontal', //変化の種類を設定、vertival,horizontal,fade
 			speed: 500,
 			auto: true, //自動で画像が変化する
 		});
@@ -24,10 +24,12 @@
     </header>
 
 <!-- スクロール横画像 -->
-<div id="bxslider">
-	<div><img src="images/owl.png"></div>
-	<img src="images/kogera.png">
-	<img src="images/kawasemi.png">
+<div class="slider">
+	<ul class="bxslider">
+		<li><img src="images/owl.png"><</li>
+		<li><img src="images/kogera.png"></li>
+		<li><img src="images/kawasemi.png"></li>
+	</ul>
 </div>
     
 <!-- プルダウンメニューを構成するHTML -->
