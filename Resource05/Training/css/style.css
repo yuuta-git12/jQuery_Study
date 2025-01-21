@@ -1,0 +1,112 @@
+﻿<style type ="text/css">
+/* reset css */
+*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role='list'],ol[role='list']{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}
+
+#container {
+width: 80%;
+max-width: 1000px;
+margin: 0 auto;
+background-color: #fff;
+}
+}
+        /* メニューバーの装飾 */
+		nav {
+			width: 100% 
+		}
+        /* メインメニュー項目の装飾 */
+		nav ul#menu {
+			display: grid;
+			grid-template-columns:  1fr 1fr 1fr 1fr;
+			gap: 3px;
+			margin-top: 0px; 
+			background-color: #eee; 
+			padding: 0px; 
+			height: 40px; 
+		}
+		nav ul#menu li {
+		    width: 100%; /* メニュー項目の横幅 */
+		    list-style-type: none;
+		    position: relative;
+		}
+        nav ul#menu li ul.sub {
+            width: 100%;
+        }
+		nav ul#menu a {
+			background-color: #9f9; /* メニュー項目の背景色 */
+            color: #000;
+		    line-height: 40px;         /* メニュー項目のリンクの高さ（「メニュー項目の高さ」と一致させる） */
+		    text-align: center;        /* メインメニューの文字列の配置（中央寄せ） */
+		    text-decoration: none;     /* メニュー項目の装飾（下線を消す） */
+		    display: block;
+		}
+		nav ul#menu a:hover {
+			background-color: #fff; /* メニュー項目にマウスが載ったときの背景色 */
+			color: #000;            /* メニュー項目にマウスが載ったときの文字色 */
+		}
+
+
+		/* ---------------------- */
+		/* サブメニュー項目の装飾 */
+		nav ul#menu ul.sub {
+			position: absolute;
+            margin-left: -20%;
+		}
+		nav ul#menu ul.sub li {
+            width: 100%; /* サブメニュー1項目の横幅 */
+		}
+		nav ul#menu ul.sub li a {
+			line-height: 35px; /* サブメニュー1項目の行高（「サブメニュー1項目の高さ」と合わせる） */
+			text-align: left;  /* 文字列の配置（左寄せ） */
+			text-indent: 5px;  /* 文字列前方の余白 */
+		}
+		nav ul#menu ul.sub li a:hover {
+			background-color: #663;/* サブメニュー項目にマウスが載ったときの背景色 */
+			color: #fff;            /* サブメニュー項目にマウスが載ったときの文字色 */
+		}
+        
+        /* スクロール画像のCSS設定 */
+        div.slider {
+            margin-top: 30px;
+        }
+        div.slider img {
+            width: 100%;
+        }
+        
+/* NewsのCSS設定 */
+	article {
+		margin: 0 0 20px 0;
+		padding:  0 2% 10px 2%;
+		background-color:  #fffaf0;
+	}
+    article h1 {
+        font-size: 1.4em;
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #000;
+        margin-top: 40px;
+    }
+    article section {
+        margin: 15px 0 20px 0;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #000;
+    }
+    article section h2 {
+        font-size: 0.9em;
+	  margin-bottom:  15px;
+    }
+    article section .news {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	gap: 0 3%;
+	padding:  0;
+    }
+    article section .news img {
+	width: 100%;
+	border-radius: 10px;
+    }
+    article section .news p {
+	font-size:  0.9em;
+	margin:  0;
+	padding:  0;
+    }
+     </style>
