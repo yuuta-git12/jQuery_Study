@@ -8,11 +8,22 @@
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script>
       $(function(){
-        $(".bxslider").bxSlider({
+            $(".bxslider").bxSlider({
 			mode:'horizontal', //変化の種類を設定、vertival,horizontal,fade
 			speed: 500,
 			auto: true, //自動で画像が変化する
-		});
+            });
+            // マウスが載った際に行う処理
+            // 兄弟要素に含まれるサブメニューを全部消す
+            //　自分のサブメニューをslidedownで表示する
+            $(".menu-item").mouseenter(function(){
+                  $(this).siblings().find("ul").hide();
+                  $(this).children().slideDown(150);
+            });
+            $("html").click(function(){
+                  $(".subMenu").slideUp(150);
+            });
+		
       });
     </script>
 </head>
@@ -33,39 +44,39 @@
 </div>
     
 <!-- プルダウンメニューを構成するHTML -->
-    <nav>
-		<ul id="menu">
-			<li><a href="#">春の野鳥</a>
-				<ul class="sub" style="display: none;">
-					<li><a href="#">メジロ</a></li>
-					<li><a href="#">ツバメ</a></li>
-					<li><a href="#">ヒバリ</a></li>
-				</ul>
-			</li>
-			<li><a href="#">夏の野鳥</a>
-				<ul class="sub" style="display: none;">
-					<li><a href="#">オオヨシキリ</a></li>
-					<li><a href="#">アオバズク</a></li>
-					<li><a href="#">カワセミ</a></li>
-				</ul>
-			</li>
-			<li><a href="#">秋の野鳥</a>
-				<ul class="sub" style="display: none;">
-					<li><a href="#">カワラヒワ</a></li>
-					<li><a href="#">モズ</a></li>
-					<li><a href="#">ジョウビタキ</a></li>
-					<li><a href="#">コゲラ</a></li>
-				</ul>
-			</li>
-			<li><a href="#">冬の野鳥</a>
-				<ul class="sub" style="display: none;">
-					<li><a href="#">シジュウカラ</a></li>
-					<li><a href="#">ルリビタキ</a></li>
-                    <li><a href="#">ノスリ</a></li>
-				</ul>
-			</li>
-		</ul>
-	</nav>
+<nav>
+    <ul class="menu">
+        <li class="menu-item"><a href="#">春の野鳥</a>
+            <ul class="subMenu">
+                  <li class="subMenu-item"><a href="#">メジロ</a></li>
+                  <li class="subMenu-item"><a href="#">ツバメ</a></li>
+                  <li class="subMenu-item"><a href="#">ヒバリ</a></li>
+			</ul>
+		</li>  
+		<li class="menu-item"><a href="#">夏の野鳥</a>
+            <ul class="subMenu">
+                  <li class="subMenu-item"><a href="#">オオヨシキリ</a></li>
+                  <li class="subMenu-item"><a href="#">アオバズク</a></li>
+                  <li class="subMenu-item"><a href="#">カワセミ</a></li>
+			</ul>
+		</li>  
+		<li class="menu-item"><a href="#">秋の野鳥</a>
+            <ul class="subMenu">
+                  <li class="subMenu-item"><a href="#">カワラヒワ</a></li>
+                  <li class="subMenu-item"><a href="#">ジョウビタキ</a></li>
+                  <li class="subMenu-item"><a href="#">モズ</a></li>
+                  <li class="subMenu-item"><a href="#">コゲラ</a></li>
+			</ul>
+		</li>  
+		<li class="menu-item"><a href="#">冬の野鳥</a>
+            <ul class="subMenu">
+                  <li class="subMenu-item"><a href="#">シジュウカラ</a></li>
+                  <li class="subMenu-item"><a href="#">ルリビタキ</a></li>
+                  <li class="subMenu-item"><a href="#">ノスリ</a></li>
+			</ul>
+		</li>  
+	</ul>
+</nav>
     
    
 <!-- News -->    
