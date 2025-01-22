@@ -1,0 +1,143 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<title>dropdown.html</title>
+<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script>
+$(function(){
+//この中に処理を記述 開始
+//bxsliderの表示設定
+$('.bxslider').bxSlider({
+mode: 'horizontal',
+speed: 1000,	
+startSlide: 0,	
+auto: false,	
+autoControls: true,	
+adaptiveHeight: true,	
+captions: false	
+});
+
+//ドロップダウンメニューのjQuery
+$(".menu-item").mouseenter(function(){
+    $(this).siblings().find("ul").hide();
+    $(this).children().slideDown(150);
+});
+$("html").click(function(){
+    $(".subMenu").slideUp(150);
+});
+//back-to-topのjquery
+$(window).scroll(function() {
+    if($(this).scrollTop() > 100) { // 100pxスクロールしていたら上に戻るボタンを表示
+        $(".back-to-top").fadeIn(); 
+    } else {
+        $(".back-to-top").fadeOut();
+    }
+});
+$(".back-to-top").click(function() {
+    $("body,html").animate({scrollTop:0},800); // 800msかけて上に戻る
+});
+
+//要素の頭が画面全体に一定範囲表示されたらjQueryを実行する
+$(window).scroll(function(){ //画面がスクロールされたら実行
+    $(".sf-fadeIn").each(function(){
+        let fs_pos = $(this).offset().top;
+        let fs_scroll = $(window).scrollTop(); //windowがスクロールされた量
+        let fs_height = $(window).height();
+        if(fs_scroll > fs_pos-fs_height + 100){
+            $(this).addClass("add-scroll");
+        }
+    });
+});
+});
+</script> 
+</head>
+
+<body>
+    <a href="#" class="back-to-top"><img class="arrow" src="images/arrow.png"></a>
+<div id="container">
+    <header>
+        <img src="images/logo.gif">
+    </header>
+
+<!-- スクロール横画像 -->
+    <div class="slider">
+	   <ul class="bxslider">
+	   <li><img src="images/owl.png"></li>
+	   <li><img src="images/kogera.png"></li>
+	   <li><img src="images/kawasemi.png"></li>
+	   </ul>
+    </div>
+    
+<!-- ドロップダウンメニューを構成するHTML -->
+<nav>
+    <ul class="menu">
+        <li class="menu-item"><a href="#">春の野鳥</a>
+            <ul class="subMenu">
+                  <li class="subMenu-item"><a href="#">メジロ</a></li>
+                  <li class="subMenu-item"><a href="#">ツバメ</a></li>
+                  <li class="subMenu-item"><a href="#">ヒバリ</a></li>
+              </ul>
+          </li>  
+          <li class="menu-item"><a href="#">夏の野鳥</a>
+            <ul class="subMenu">
+                  <li class="subMenu-item"><a href="#">オオヨシキリ</a></li>
+                  <li class="subMenu-item"><a href="#">アオバズク</a></li>
+                  <li class="subMenu-item"><a href="#">カワセミ</a></li>
+              </ul>
+          </li>  
+          <li class="menu-item"><a href="#">秋の野鳥</a>
+            <ul class="subMenu">
+                  <li class="subMenu-item"><a href="#">カワラヒワ</a></li>
+                  <li class="subMenu-item"><a href="#">ジョウビタキ</a></li>
+                  <li class="subMenu-item"><a href="#">モズ</a></li>
+                  <li class="subMenu-item"><a href="#">コゲラ</a></li>
+              </ul>
+          </li>  
+          <li class="menu-item"><a href="#">冬の野鳥</a>
+            <ul class="subMenu">
+                  <li class="subMenu-item"><a href="#">シジュウカラ</a></li>
+                  <li class="subMenu-item"><a href="#">ルリビタキ</a></li>
+                  <li class="subMenu-item"><a href="#">ノスリ</a></li>
+              </ul>
+          </li>  
+            </ul>
+</nav>
+<!-- News -->    
+    <article>
+            <h1>Topics</h1>
+            <section class="sf-fadeIn">
+                <h2>2016年6月3日 セキレイがベランダに巣を作っていた</h2>
+		    <div class="news">
+		    <img src="images/sekirei_n2.jpg">
+                <p>久しぶりにベランダから外を眺めていると、足元に見慣れない木くずや小枝があるのに気づきました。そのままにしておくと、数時 間後セキレイが来て巣作りを始めました。何度も行き来してせっせと小枝を運んできます。オスなのかメスなのか、1羽なのか2羽な のかもわかりません。こんな街中のマンションでも巣を作るんですね。</p>
+		 	</div>
+            </section>
+            <section>
+                <h2>2016年1月15日 二丁目のウメの花が開花 メジロが数羽</h2>
+		    <div class="news">
+		    <img src="images/mejiro_n2.jpg">
+                <p>二丁目の民家宅庭先のウメの花が咲きました。通勤途中で見かけました。少し見ているとメジロが数羽ですが来ていました。もうす ぐ春。サクラが咲くころになるとメジロたちは群れになって花のある木から木へと移動します。一時の消滅危惧から今は個体数も回 復しているようです。</p>
+		</div>
+            </section>
+            <section>
+                <h2>2013年11月3日 三丁目公園でモズ</h2>
+		    <div class="news">
+		    <img src="images/mozu_n.jpg">
+                <p>11月3日の朝、散歩の途中で三丁目公園の松の木の上でモズが鳴いていました。あたりの木の中で1番高いところに陣取り、周囲 を威嚇するように鳴いていました。同じ場所では去年の冬にもモズがみられました。同じ個体が冬に戻ってきて、同じテリトリーで過 ごしているようにも見えます。</p>
+		</div>
+            </section>
+            <section>
+                <h2>2012年5月3日 カルガモが植木の中に巣をつくった</h2>
+		    <div class="news">
+		    <img src="images/karugamo.jpg">
+                <p>公園西の街のマンション2階の植え込みの中でカルガモが巣を作りヒナをかえしました。昨日知り合いから知らせがあり見てきまし た。植え込みの近くの池にヒナを連れて行こうとしていましたが、人が見に来ていて躊躇しているようでした。ただ残念ながらこの池 には水はわずかしかありません。餌もないのでヒナを育てるには不十分です。このカルガモのヒナたち、無事に巣立ちができるどう か不安です。</p>
+		</div>
+            </section>
+        </article>
+
+</div>
+</body>
+</html>
